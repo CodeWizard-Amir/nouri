@@ -85,7 +85,7 @@ const DeveloperPortfolio = () => {
   }, []);
 
   const socialLinks = [
-    { icon: <FaGithub />, name: 'GitHub', url: 'https://github.com/CodeWizard-Amir', color: 'bg-gray-800 hover:bg-gray-900', text: 'github/username' },
+    { icon: <FaGithub />, name: 'GitHub', url: 'https://github.com/CodeWizard-Amir', color: 'bg-gray-900 hover:bg-gray-950', text: 'github/username' },
     { icon: <FaLinkedin />, name: 'LinkedIn', url: 'https://www.linkedin.com/in/amirsajjad-nouri-8a0910383/', color: 'bg-blue-700 hover:bg-blue-800', text: 'linkedin/username' },
     { icon: <FaTwitter />, name: 'Twitter', url: 'https://twitter.com/#', color: 'bg-sky-500 hover:bg-sky-600', text: '@username' },
     { icon: <FaTelegram />, name: 'Telegram', url: 'https://t.me/Amir_sjd12', color: 'bg-blue-500 hover:bg-blue-600', text: 't.me/username' },
@@ -431,7 +431,7 @@ const DeveloperPortfolio = () => {
                       </p>
 
                       <p className="leading-relaxed">
-                        تخصص اصلی من در توسعه اپلیکیشن‌های مالی و صرافی‌های ارز دیجیتال است. در پروژه‌های اخیرم، سیستم‌های معاملاتی با کارایی بالا و امنیت پیشرفته طراحی کرده‌ام که توانایی پردازش هزاران تراکنش در ثانیه را دارند.
+                        تخصص اصلی من توسعه انواع وب اپلیکیشن‌های مدرن با تکنولوژی های برتر جهان است و درحال کسب تجربه در زمینه ارزهای دیجیتال و ابزارها ی آن هستم.
                       </p>
 
                       <div className={`p-6 rounded-2xl ${isDarkMode ? 'bg-gray-700' : 'bg-gradient-to-r from-blue-50 to-indigo-50'} border ${isDarkMode ? 'border-gray-600' : 'border-blue-100'}`}>
