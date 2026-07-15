@@ -365,11 +365,14 @@ const DeveloperPortfolio = () => {
                 </div>
               </div>
 
-              {/* دکمه دانلود رزومه */}
-              <button className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-3 rounded-xl font-semibold hover:from-indigo-700 hover:to-purple-700 transition duration-300 flex items-center justify-center mb-8">
+              <a
+                href='/res.pdf'
+                download='res.pdf'
+                className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-3 rounded-xl font-semibold hover:from-indigo-700 hover:to-purple-700 transition duration-300 flex items-center justify-center mb-8"
+              >
                 <FaDownload className="ml-2" />
                 دانلود رزومه (PDF)
-              </button>
+              </a>
 
               {/* شبکه‌های اجتماعی */}
               <div>
@@ -776,7 +779,7 @@ const DeveloperPortfolio = () => {
                               {/* Content */}
                               <div className="p-6">
                                 {/* Image Container */}
-                                <div className="relative p-5 w-full h-60 md:h-[500px] rounded-2xl overflow-hidden mb-6 bg-gradient-to-br from-gray-900/20 to-indigo-900/20">  
+                                <div className="relative p-5 w-full h-60 md:h-[500px] rounded-2xl overflow-hidden mb-6 bg-gradient-to-br from-gray-900/20 to-indigo-900/20">
                                   {/* اگر تصویر واقعی دارید، این را فعال کنید */}
                                   <Image
                                     src={selectedCert.image}
