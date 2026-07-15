@@ -155,6 +155,15 @@ const DeveloperPortfolio = () => {
       stars: 312,
       featured: true
     },
+    {
+      title: 'آکادمی انلاین آلفا پک',
+      description: 'شرکت و تیم طراحی وب اپ های مدرن و پیشرفته',
+      tech: ['Next.js', 'json-server', 'tailwind',],
+      github: 'https://github.com/CodeWizard-Amir/alphapack',
+      live: 'https://alphapacks.vercel.app/',
+      stars: 1650,
+      featured: true
+    },
   ];
 
   const experience = [
