@@ -132,8 +132,8 @@ const DeveloperPortfolio = () => {
       title: 'سیستم مدیریت دانشجویی کلاس',
       description: 'سیستم مدرن مجهز به بسیاری از امکانات مانند ربات تلگرام و PWA',
       tech: ['laravel', 'tailwind', 'jQuery', 'reverb', 'telegram-bot', 'pwa'],
-      github: '#',
-      live: '#',
+      github: 'https://github.com/CodeWizard-Amir/myClass',
+      live: null,
       stars: 189,
       featured: true
     },
@@ -153,6 +153,15 @@ const DeveloperPortfolio = () => {
       github: 'https://github.com/CodeWizard-Amir/novins',
       live: 'https://novins.vercel.app',
       stars: 312,
+      featured: true
+    },
+    {
+      title: 'گروه نرم افزاری Vexa',
+      description: 'گروه برنامه نویسی متشکل از سنیور ها',
+      tech: ['Next.js', 'framer-motion', 'react-icons', 'tailwind',],
+      github: 'https://github.com/CodeWizard-Amir/Vexa',
+      live: 'https://vexxaa1.vercel.app/',
+      stars: 601,
       featured: true
     },
     {
@@ -606,14 +615,32 @@ const DeveloperPortfolio = () => {
                             </div>
 
                             <div className="flex justify-between">
-                              <a href={project.github} target="_blank" rel="noopener noreferrer" className="flex items-center text-gray-600 dark:text-gray-400 hover:text-black">
-                                <FaGithub className="ml-1" />
-                                کد منبع
-                              </a>
-                              <a href={project.live} target="_blank" rel="noopener noreferrer" className="flex items-center text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 hover:dark:text-indigo-300">
-                                <FaExternalLinkAlt className="ml-1" />
-                                مشاهده پروژه
-                              </a>
+                              {
+                                project.github
+                                  ?
+                                  <a href={project.github} target={"_blank"} rel="noopener noreferrer" className="flex items-center text-gray-600 dark:text-gray-400 hover:text-black">
+                                    <FaGithub className="ml-1" />
+                                    کد منبع
+                                  </a>
+                                  :
+                                  <button className="flex items-center text-gray-600 dark:text-gray-400 hover:text-black">
+                                    <FaGithub className="ml-1" />
+                                    کد منبع
+                                  </button>
+                              }
+                              {
+                                project.live
+                                  ?
+                                  <a href={project.live} target={"_blank"} rel="noopener noreferrer" className="flex items-center text-gray-600 dark:text-gray-400 hover:text-black">
+                                    <FaGithub className="ml-1" />
+                                    مشاهده پروژه
+                                  </a>
+                                  :
+                                  <button className="flex items-center text-gray-600 dark:text-gray-400 hover:text-black">
+                                    <FaGithub className="ml-1" />
+                                    مشاهده پروژه
+                                  </button>
+                              }
                             </div>
                           </div>
                         </div>
