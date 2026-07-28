@@ -140,9 +140,9 @@ const DeveloperPortfolio = () => {
     {
       title: 'پایگاه خبری تویسرکان',
       description: 'وبسایت خبری برای شهرستان تاریخی تویسرکان',
-      tech: ['React Native', 'Python', 'TensorFlow', 'Firebase'],
-      github: '#',
-      live: 'https://tuyserkanmafakher.ir/',
+      tech: ['Laravel 11', 'tailwind', 'blade', 'mySql'],
+      github: 'https://github.com/CodeWizard-Amir/tuysekannews',
+      live: null,
       stars: 156,
       featured: false
     },
@@ -171,6 +171,24 @@ const DeveloperPortfolio = () => {
       github: 'https://github.com/CodeWizard-Amir/alphapack',
       live: 'https://alphapacks.vercel.app/',
       stars: 1650,
+      featured: true
+    },
+    {
+      title: 'پارس ایر - فرانت اند',
+      description: 'شرکت  حمل نقل بار هوایی',
+      tech: ['Next.js', 'json-server', 'tailwind','Next-Auth'],
+      github: 'https://github.com/CodeWizard-Amir/agence-frontEnd',
+      live: null,
+      stars: 1357,
+      featured: true
+    },
+    {
+      title: 'پارس ایر - بک اند',
+      description: 'شرکت حمل نقل بار هوایی',
+      tech: ['Laravel', 'PHP', 'Sanctum', 'mySql'],
+      github: 'https://github.com/CodeWizard-Amir/agence-backend',
+      live: null,
+      stars: 45,
       featured: true
     },
   ];
@@ -617,29 +635,21 @@ const DeveloperPortfolio = () => {
                             <div className="flex justify-between">
                               {
                                 project.github
-                                  ?
-                                  <a href={project.github} target={"_blank"} rel="noopener noreferrer" className="flex items-center text-gray-600 dark:text-gray-400 hover:text-black">
-                                    <FaGithub className="ml-1" />
-                                    کد منبع
-                                  </a>
-                                  :
-                                  <button className="flex items-center text-gray-600 dark:text-gray-400 hover:text-black">
-                                    <FaGithub className="ml-1" />
-                                    کد منبع
-                                  </button>
+                                &&
+                                <a href={project.github} target={"_blank"} rel="noopener noreferrer" className="flex items-center text-gray-600 dark:text-gray-400 hover:text-black">
+                                  <FaGithub className="ml-1" />
+                                  کد منبع
+                                </a>
+
                               }
                               {
                                 project.live
-                                  ?
-                                  <a href={project.live} target={"_blank"} rel="noopener noreferrer" className="flex items-center text-gray-600 dark:text-gray-400 hover:text-black">
-                                    <FaGithub className="ml-1" />
-                                    مشاهده پروژه
-                                  </a>
-                                  :
-                                  <button className="flex items-center text-gray-600 dark:text-gray-400 hover:text-black">
-                                    <FaGithub className="ml-1" />
-                                    مشاهده پروژه
-                                  </button>
+                                &&
+                                <a href={project.live} target={"_blank"} rel="noopener noreferrer" className="flex items-center text-gray-600 dark:text-gray-400 hover:text-black">
+                                  <FaGithub className="ml-1" />
+                                  مشاهده پروژه
+                                </a>
+
                               }
                             </div>
                           </div>
