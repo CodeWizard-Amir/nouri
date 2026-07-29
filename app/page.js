@@ -5,7 +5,7 @@ import TTC from '../public/TTC.jpg'
 import Scrum from '../public/Scrum.jpg'
 import WEB from '../public/WEB.jpg'
 import Diploma from '../public/Diploma.jpg'
-
+import { BsTwitterX } from "react-icons/bs";
 import {
   FaGithub,
   FaLinkedin,
@@ -42,7 +42,9 @@ import {
   FaMapMarkerAlt,
   FaDownload,
   FaExternalLinkAlt,
-  FaQuoteLeft
+  FaQuoteLeft,
+  FaXRay,
+  FaCheckCircle
 } from 'react-icons/fa';
 import {
   MdEmail,
@@ -62,7 +64,8 @@ import {
   SiPostgresql,
   SiKubernetes,
   SiJenkins,
-  SiFigma
+  SiFigma,
+  SiReactquery
 } from 'react-icons/si';
 import { GiCircuitry } from 'react-icons/gi';
 import { DiMysql } from "react-icons/di";
@@ -87,7 +90,7 @@ const DeveloperPortfolio = () => {
   const socialLinks = [
     { icon: <FaGithub />, name: 'GitHub', url: 'https://github.com/CodeWizard-Amir', color: 'bg-gray-900 hover:bg-gray-950', text: 'github/username' },
     { icon: <FaLinkedin />, name: 'LinkedIn', url: 'https://www.linkedin.com/in/amirsajjad-nouri-8a0910383/', color: 'bg-blue-700 hover:bg-blue-800', text: 'linkedin/username' },
-    { icon: <FaTwitter />, name: 'Twitter', url: 'https://twitter.com/#', color: 'bg-sky-500 hover:bg-sky-600', text: '@username' },
+    { icon: <BsTwitterX />, name: 'X.com', url: 'https://x.com/AmirSjjad_2003', color: 'bg-gray-700 hover:bg-gray-900', text: '@username' },
     { icon: <FaTelegram />, name: 'Telegram', url: 'https://t.me/Amir_sjd12', color: 'bg-blue-500 hover:bg-blue-600', text: 't.me/username' },
     { icon: <FaInstagram />, name: 'Instagram', url: 'https://instagram.com/amirsajjad_nouri', color: 'bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700', text: '@username' },
     { icon: <FaYoutube />, name: 'YouTube', url: 'https://youtube.com/c/#', color: 'bg-red-600 hover:bg-red-700', text: 'youtube/username' },
@@ -96,19 +99,20 @@ const DeveloperPortfolio = () => {
   const techStack = [
     {
       category: 'Frontend', skills: [
-        { name: 'javascript', icon: <FaJs />, level: 90, color: 'from-yellow-400 to-yellow-600' },
+        { name: 'javascript', icon: <FaJs />, level: 95, color: 'from-yellow-400 to-yellow-600' },
         { name: 'React', icon: <FaReact />, level: 90, color: 'from-blue-400 to-cyan-400' },
-        { name: 'Next.js', icon: <SiNextdotjs />, level: 85, color: 'from-gray-800 to-gray-600' },
-        { name: 'redux', icon: <SiRedux />, level: 90, color: 'from-purple-400 to-indigo-600' },
-        { name: 'TypeScript', icon: <SiTypescript />, level: 45, color: 'from-blue-600 to-blue-400' },
+        { name: 'Next.js', icon: <SiNextdotjs />, level: 95, color: 'from-gray-800 to-gray-600' },
+        { name: 'Redux', icon: <SiRedux />, level: 90, color: 'from-purple-400 to-indigo-600' },
+        { name: 'React-Query', icon: <SiReactquery />, level: 90, color: 'from-green-600 to-yellow-500' },
+        { name: 'TypeScript', icon: <SiTypescript />, level: 60, color: 'from-blue-600 to-blue-400' },
         { name: 'Tailwind', icon: <SiTailwindcss />, level: 90, color: 'from-teal-500 to-cyan-400' },
       ]
     },
     {
       category: 'Backend', skills: [
-        { name: 'PHP', icon: <FaPhp />, level: 85, color: 'from-purple-800 to-blue-600' },
-        { name: 'Laravel', icon: <FaLaravel />, level: 85, color: 'from-red-600 to-orange-400' },
-        { name: 'laravel-reverb', icon: <DiLaravel />, level: 85, color: 'from-pink-600 to-red-400' },
+        { name: 'PHP', icon: <FaPhp />, level: 90, color: 'from-purple-800 to-blue-600' },
+        { name: 'Laravel', icon: <FaLaravel />, level: 90, color: 'from-red-600 to-orange-400' },
+        { name: 'laravel-reverb', icon: <DiLaravel />, level: 45, color: 'from-pink-600 to-red-400' },
       ]
     },
     {
@@ -129,7 +133,7 @@ const DeveloperPortfolio = () => {
       featured: true
     },
     {
-      title: 'سیستم مدیریت دانشجویی کلاس',
+      title: 'سیستم مدیریت دانشجویی',
       description: 'سیستم مدرن مجهز به بسیاری از امکانات مانند ربات تلگرام و PWA',
       tech: ['laravel', 'tailwind', 'jQuery', 'reverb', 'telegram-bot', 'pwa'],
       github: 'https://github.com/CodeWizard-Amir/myClass',
@@ -140,16 +144,16 @@ const DeveloperPortfolio = () => {
     {
       title: 'پایگاه خبری تویسرکان',
       description: 'وبسایت خبری برای شهرستان تاریخی تویسرکان',
-      tech: ['Laravel 11', 'tailwind', 'blade', 'mySql'],
+      tech: ['Laravel 11', 'tailwind', 'blade', 'mySql', 'jQuery', 'sweetalert'],
       github: 'https://github.com/CodeWizard-Amir/tuysekannews',
       live: null,
       stars: 156,
-      featured: false
+      featured: true
     },
     {
       title: 'وبسایت شرکتی نوینان',
       description: 'شرکت و تیم طراحی وب اپ های مدرن و پیشرفته',
-      tech: ['React.js', 'json-server', 'tailwind', 'redux',],
+      tech: ['React.js', 'json-server', 'tailwind', 'redux', 'Rtk-Query'],
       github: 'https://github.com/CodeWizard-Amir/novins',
       live: 'https://novins.vercel.app',
       stars: 312,
@@ -167,7 +171,7 @@ const DeveloperPortfolio = () => {
     {
       title: 'آکادمی انلاین آلفا پک',
       description: 'شرکت و تیم طراحی وب اپ های مدرن و پیشرفته',
-      tech: ['Next.js', 'json-server', 'tailwind',],
+      tech: ['Next.js', 'json-server', 'tailwind', 'typeScript', '...'],
       github: 'https://github.com/CodeWizard-Amir/alphapack',
       live: 'https://alphapacks.vercel.app/',
       stars: 1650,
@@ -176,7 +180,7 @@ const DeveloperPortfolio = () => {
     {
       title: 'پارس ایر - فرانت اند',
       description: 'شرکت  حمل نقل بار هوایی',
-      tech: ['Next.js', 'json-server', 'tailwind','Next-Auth'],
+      tech: ['Next.js', 'json-server', 'tailwind', 'Next-Auth', 'React-Query'],
       github: 'https://github.com/CodeWizard-Amir/agence-frontEnd',
       live: null,
       stars: 1357,
@@ -185,7 +189,7 @@ const DeveloperPortfolio = () => {
     {
       title: 'پارس ایر - بک اند',
       description: 'شرکت حمل نقل بار هوایی',
-      tech: ['Laravel', 'PHP', 'Sanctum', 'mySql'],
+      tech: ['Laravel-12', 'PHP', 'Sanctum', 'mySql', 'Api-services'],
       github: 'https://github.com/CodeWizard-Amir/agence-backend',
       live: null,
       stars: 45,
@@ -361,25 +365,41 @@ const DeveloperPortfolio = () => {
 
               {/* اطلاعات تماس */}
               <div className="space-y-4 mb-8">
-                <div className={`flex items-center p-3 rounded-xl ${isDarkMode ? 'bg-gray-700' : 'bg-gray-50'}`}>
-                  <div className="bg-indigo-100 dark:bg-indigo-900 p-2 rounded-lg ml-3">
-                    <MdEmail className="text-indigo-600 dark:text-indigo-300" />
-                  </div>
-                  <div>
-                    <div className="text-sm text-gray-500 dark:text-gray-400">ایمیل</div>
-                    <div className="font-medium">amirwebsajjad@gmail.com</div>
-                  </div>
+
+
+                <div className="space-y-4 mb-4">
+                  {/* لینک ایمیل */}
+                  <a
+                    href="mailto:amirwebsajjad@gmail.com"
+                    className={`flex items-center p-3 rounded-xl transition-colors ${isDarkMode ? 'bg-gray-700 hover:bg-gray-600' : 'bg-gray-50 hover:bg-gray-100'
+                      }`}
+                  >
+                    <div className="bg-indigo-100 dark:bg-indigo-900 p-2 rounded-lg ml-3">
+                      <MdEmail className="text-indigo-600 dark:text-indigo-300" />
+                    </div>
+                    <div>
+                      <div className="text-sm text-gray-500 dark:text-gray-400">ایمیل</div>
+                      <div className="font-medium">amirwebsajjad@gmail.com</div>
+                    </div>
+                  </a>
+
+                  {/* لینک تلفن */}
+                  <a
+                    href="tel:09104816785"
+                    className={`flex items-center p-3 rounded-xl transition-colors ${isDarkMode ? 'bg-gray-700 hover:bg-gray-600' : 'bg-gray-50 hover:bg-gray-100'
+                      }`}
+                  >
+                    <div className="bg-green-100 dark:bg-green-900 p-2 rounded-lg ml-3">
+                      <FaPhone className="text-green-600 dark:text-green-300" />
+                    </div>
+                    <div>
+                      <div className="text-sm text-gray-500 dark:text-gray-400">تلفن</div>
+                      <div className="font-medium">09104816785</div>
+                    </div>
+                  </a>
                 </div>
 
-                <div className={`flex items-center p-3 rounded-xl ${isDarkMode ? 'bg-gray-700' : 'bg-gray-50'}`}>
-                  <div className="bg-green-100 dark:bg-green-900 p-2 rounded-lg ml-3">
-                    <FaPhone className="text-green-600 dark:text-green-300" />
-                  </div>
-                  <div>
-                    <div className="text-sm text-gray-500 dark:text-gray-400">تلفن</div>
-                    <div className="font-medium">09104816785</div>
-                  </div>
-                </div>
+
 
                 <div className={`flex items-center p-3 rounded-xl ${isDarkMode ? 'bg-gray-700' : 'bg-gray-50'}`}>
                   <div className="bg-blue-100 dark:bg-blue-900 p-2 rounded-lg ml-3">
@@ -480,26 +500,26 @@ const DeveloperPortfolio = () => {
                         </h3>
                         <ul className="space-y-3">
                           <li className="flex items-start">
-                            <div className="bg-green-100 dark:bg-green-900 p-1 rounded ml-3 mt-1">
-                              {/* <FaCheckCircle className="text-green-600 dark:text-green-300 text-sm" /> */}
+                          <div className="p-1 rounded ml-1 mt-1">
+                              <FaCheckCircle className="text-green-600 -mt-0.75 dark:text-green-500 text-sm" />
                             </div>
                             <span>کد تمیز و قابل نگهداری اولویت اول است</span>
                           </li>
                           <li className="flex items-start">
-                            <div className="bg-green-100 dark:bg-green-900 p-1 rounded ml-3 mt-1">
-                              {/* <FaCheckCircle className="text-green-600 dark:text-green-300 text-sm" /> */}
+                            <div className="p-1 rounded ml-1 mt-1">
+                              <FaCheckCircle className="text-green-600 -mt-0.75 dark:text-green-500 text-sm" />
                             </div>
                             <span>تست نویسی کامل برای کاهش باگ‌ها</span>
                           </li>
                           <li className="flex items-start">
-                            <div className="bg-green-100 dark:bg-green-900 p-1 rounded ml-3 mt-1">
-                              {/* <FaCheckCircle className="text-green-600 dark:text-green-300 text-sm" /> */}
+                                <div className="p-1 rounded ml-1 mt-1">
+                              <FaCheckCircle className="text-green-600 -mt-0.75 dark:text-green-500 text-sm" />
                             </div>
                             <span>بهینه‌سازی عملکرد و تجربه کاربری</span>
                           </li>
                           <li className="flex items-start">
-                            <div className="bg-green-100 dark:bg-green-900 p-1 rounded ml-3 mt-1">
-                              {/* <FaCheckCircle className="text-green-600 dark:text-green-300 text-sm" /> */}
+                            <div className="p-1 rounded ml-1 mt-1">
+                              <FaCheckCircle className="text-green-600 -mt-0.75 dark:text-green-500 text-sm" />
                             </div>
                             <span>همکاری مؤثر با تیم و مستندسازی کامل</span>
                           </li>
@@ -509,7 +529,7 @@ const DeveloperPortfolio = () => {
                       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
                         {[
                           { value: '5+', label: 'سال تجربه' },
-                          { value: '5+', label: 'پروژه موفق' },
+                          { value: projects.length+'+', label: 'پروژه موفق' },
                           { value: '80%', label: 'رضایت کارفرما' },
                           { value: '24/7', label: 'پشتیبانی' },
                         ].map((stat, index) => (
@@ -548,7 +568,7 @@ const DeveloperPortfolio = () => {
                               <div key={skillIndex} className="space-y-2">
                                 <div className="flex justify-between items-center">
                                   <div className="flex items-center">
-                                    <div className={`bg-gradient-to-r ${skill.color} p-2 rounded-lg ml-3`}>
+                                    <div className={`bg-gradient-to-r text-white! ${skill.color} p-2 rounded-lg ml-3`}>
                                       {skill.icon}
                                     </div>
                                     <span className="font-medium">{skill.name}</span>
